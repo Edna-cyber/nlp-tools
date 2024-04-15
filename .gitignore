@@ -30,3 +30,4 @@ temp_problem
 nlp_script.sh
 slurm_output.out
 slurm_error.err
+pretrained/
