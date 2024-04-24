@@ -51,7 +51,7 @@ if __name__ == '__main__':
     import random
     import torch
     import torch.backends.cudnn
-    from reasoners.lm import LlamaModel, Llama2Model
+    from reasoners.lm import LlamaModel #, Llama2Model
     np.random.seed(1)
     random.seed(1)
     torch.manual_seed(1)
@@ -86,7 +86,7 @@ if __name__ == '__main__':
 
 
     def llamacpp_main(
-            llama_path = '/home/shibo/llama.cpp/models/65B/ggml-model-q8_0.bin',
+            llama_path = '/usr/project/xtmp/rz95/pretrained/models--TheBloke--LLaMa-65B-GGML/snapshots/0f4359b0d46a9cfc21b490ca027de589bf5d12f3/llama-65b.ggmlv3.q2_K.bin@',
             prompt_path: str = './prompts/prompt.json',
             data_path: str = './data/step_4.json',
             disable_log: bool = False,
