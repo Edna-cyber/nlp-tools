@@ -86,7 +86,7 @@ if __name__ == '__main__':
 
 
     def llamacpp_main(
-            llama_path = '/usr/project/xtmp/rz95/pretrained/models--TheBloke--LLaMa-65B-GGML/snapshots/0f4359b0d46a9cfc21b490ca027de589bf5d12f3/llama-65b.ggmlv3.q2_K.bin@',
+            llama_path = '/usr/project/xtmp/rz95/pretrained/models--TheBloke--LLaMa-65B-GGML/snapshots/0f4359b0d46a9cfc21b490ca027de589bf5d12f3/llama-65b.ggmlv3.q2_K.bin', 
             prompt_path: str = './prompts/prompt.json',
             data_path: str = './data/step_4.json',
             disable_log: bool = False,
@@ -96,7 +96,6 @@ if __name__ == '__main__':
             depth_limit: int = 6,
             **kwargs):
         
-        print("here")
         from reasoners.lm import LlamaCppModel
         with open(prompt_path) as f:
             prompt = json.load(f)

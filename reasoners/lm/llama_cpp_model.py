@@ -21,6 +21,7 @@ class LlamaCppModel(LanguageModel):
                               'If your build fails or need more details, visit https://github.com/Ber666/llm-reasoners/tree/main/reasoners/lm#llamacpp. '
                               'If you want to use facebookresearch/llama, use llama instead of llama_cpp.') from e
 
+        print("before define")
         self.llama = Llama(path,
                            n_ctx=n_ctx,
                            n_batch=n_batch,
@@ -28,6 +29,7 @@ class LlamaCppModel(LanguageModel):
                            logits_all=True,
                            verbose=False,
                            n_threads=n_thread)
+        print("after define")
         self.n_ctx = n_ctx
 
     def generate(self,
