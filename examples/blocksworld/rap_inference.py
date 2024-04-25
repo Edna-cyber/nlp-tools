@@ -51,7 +51,7 @@ if __name__ == '__main__':
     import random
     import torch
     import torch.backends.cudnn
-    from reasoners.lm import LlamaModel #, Llama2Model
+    from reasoners.lm import LlamaModel, Llama2Model
     np.random.seed(1)
     random.seed(1)
     torch.manual_seed(1)
@@ -95,7 +95,8 @@ if __name__ == '__main__':
             domain_file: str = "./data/generated_domain.pddl",
             depth_limit: int = 6,
             **kwargs):
-
+        
+        print("here")
         from reasoners.lm import LlamaCppModel
         with open(prompt_path) as f:
             prompt = json.load(f)
